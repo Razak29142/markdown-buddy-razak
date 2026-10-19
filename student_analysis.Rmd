@@ -1,0 +1,64 @@
+---
+title: "Student Performance Analysis"
+author: "Razak"
+output: html_document
+---
+
+# Purpose
+
+This R Markdown document explains a basic student performance analysis using a synthetic dataset. The goal is to explore the relationship between study hours and exam scores.
+
+# Inputs
+
+The script uses five fictional students with the following variables:
+
+- `student`: Fictional student identifier.
+- `hours`: Number of study hours.
+- `score`: Exam score.
+
+# Data Preparation
+
+```{r create-data}
+students <- data.frame(
+  student = c("A", "B", "C", "D", "E"),
+  hours = c(2, 4, 5, 6, 8),
+  score = c(55, 65, 72, 80, 92)
+)
+
+print(students)
+```
+
+# Data Summary
+
+The following code generates descriptive statistics for the synthetic dataset.
+
+```{r summary}
+summary(students)
+```
+
+# Visualization
+
+The scatter plot displays study hours against exam scores.
+
+```{r visualization}
+plot(students$hours, students$score,
+     main = "Study Hours vs Exam Scores",
+     xlab = "Study Hours",
+     ylab = "Exam Score")
+```
+
+# Outputs
+
+The script produces:
+
+1. A table of synthetic student records.
+2. Summary statistics for each variable.
+3. A scatter plot showing study hours and exam scores.
+
+# Conclusion
+
+The example demonstrates how base R can be used to organize, summarize, and visualize a small synthetic dataset. The plot is intended for educational demonstration rather than drawing conclusions about real students.
+
+# AI Assistance Declaration
+
+ChatGPT assisted with documentation structure, Markdown formatting, and suggested R code examples. The code and document must be independently checked in RStudio or Posit Cloud before submission. Final prompts and verification notes are documented in `AI_Appendix.md`.
